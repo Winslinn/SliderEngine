@@ -1,6 +1,8 @@
 local uis = game:GetService("UserInputService")
 
+local getSliders = game:GetService("CollectionService"):GetTagged("slider")
 local mouseDown = false
+
 local activeSlider = nil
 
 local function sliderUpdate()
@@ -9,23 +11,22 @@ local function sliderUpdate()
 	local absoluteSizeX = slideFrame.AbsoluteSize.X
 	local rSlide = absoluteSizeX / 2
 	
-	local x = mousePos.X - activeSlider.AbsolutePosition.X - rSlide
-	if activeSlider:GetAttribute("Points") > 0 then
-		local points = absoluteSizeX / activeSlider:GetAttribute("Points")
-		x = math.floor((mousePos.X - activeSlider.AbsolutePosition.X) / points) * points
-	end
-	
-	local absoluteX = math.clamp(x, 0, math.huge)
+	local absoluteX = math.clamp(mousePos.X - activeSlider.AbsolutePosition.X - rSlide, 0, math.huge)
 	local endWay = activeSlider.AbsoluteSize.X - absoluteSizeX
 
 	local xScale = math.clamp(absoluteX / endWay, 0, 1)
+	if activeSlider:GetAttribute("Points") > 0 then
+		local points =  activeSlider:GetAttribute("Points") * 0.01
+		xScale = math.floor(math.clamp(absoluteX / endWay, 0, 1) / points) * points
+	end
 	
+	print(xScale)
 	slideFrame.AnchorPoint = Vector2.new(xScale, 0.5)
 	slideFrame.Position = UDim2.fromScale(xScale , slideFrame.Position.Y.Scale)
 	activeSlider:SetAttribute("Result", xScale * activeSlider:GetAttribute("Multiplier"))
 end
 
-for _,slider in pairs(game:GetService("CollectionService"):GetTagged("slider")) do
+for _,slider in pairs(getSliders) do
 	slider.MouseButton1Down:Connect(function()
 		mouseDown = true
 		activeSlider = slider
