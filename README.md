@@ -18,7 +18,7 @@ An easy-to-use script that allows you to create a simple slider in a couple of c
     - You have access to the value of the slider. Using the **:GetAttributeChangedSignal()** function, you can easily call the function you need in your script.
   + Ability to set the desired maximum value
     - The slider has a multiplier attribute, with the help of which you can set any desired maximum value (not negative).
-      - Points is how far the slider will move in percentage.
+      - В Points вписуємо в відсотках наступне значення після нуля відносно multiplier.
 
 
 ## Installation
