@@ -21,6 +21,8 @@ An easy-to-use script that allows you to create a simple slider in a couple of c
       - Lol, I don't know why Points attribute are here, maybe it's also a useful thing!
 
 ## Installation
+# Сheck the releases to get all the files you need
+
   - Install SliderEngine, gui with slider
   - Put in SliderEngine in StarterGui, slider in your own gui
   - Set the tag to the slider
