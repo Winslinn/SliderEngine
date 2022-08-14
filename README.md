@@ -11,7 +11,7 @@ An easy-to-use script that allows you to create a simple slider in a couple of c
 
 ## Features
 
-* Ease of use/coding
+* Easy of use/coding
   + You only need to install the script once in StarterGui and install the desired tag.
     - The installation process is written below under the heading *Installation*
   + Uses attributes for easy coding
