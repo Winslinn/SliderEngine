@@ -13,7 +13,7 @@ An easy-to-use script that allows you to create a simple slider in a couple of c
 
 * Easy of use/coding
   + You only need to install the script once in StarterGui and install the desired tag.
-    - The installation process is written below under the heading *Installation*
+    - The installation process is written below under the heading **Installation**
   + Uses attributes for easy coding
     - You have access to the value of the slider. Using the :GetAttributeChangedSignal() function, you can easily call the function you need in your script.
   + Ability to set the desired maximum value
