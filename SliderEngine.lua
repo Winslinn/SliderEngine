@@ -20,7 +20,6 @@ local function sliderUpdate()
 		xScale = math.floor(math.clamp(absoluteX / endWay, 0, 1) / points) * points
 	end
 	
-	print(xScale)
 	slideFrame.AnchorPoint = Vector2.new(xScale, 0.5)
 	slideFrame.Position = UDim2.fromScale(xScale , slideFrame.Position.Y.Scale)
 	activeSlider:SetAttribute("Result", xScale * activeSlider:GetAttribute("Multiplier"))
