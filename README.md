@@ -19,7 +19,7 @@ An easy-to-use script that allows you to create a simple slider in a couple of c
   + Ability to set the desired maximum value
     - The slider has a multiplier attribute, with the help of which you can set any desired maximum value (not negative).
   + Attribute points allows you to customize the slider
-    - The Points attribute gives you the ability to tell the slider how far it will move. It is indicated as a percentage or in points relative to the  multiplier (percentage must be unchecked to indicate points or v.v.). If not required, write 0.
+    - The Points attribute allows you to tell the slider how many points it will move. If not required, write 0.
 
 
 
